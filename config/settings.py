@@ -35,7 +35,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "storages",
 ]
-SELF_APPS = ["apps.users"]
+SELF_APPS = ["apps.users", "apps.authentication"]
 if IS_LOCAL_SERVER:
     DEBUG_APPS = [
         "silk",
