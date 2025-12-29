@@ -35,7 +35,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "storages",
 ]
-SELF_APPS = []
+SELF_APPS = ["apps.users"]
 if IS_LOCAL_SERVER:
     DEBUG_APPS = [
         "silk",
@@ -103,6 +103,8 @@ else:
         }
     }
 
+### --- AUTH USER --- ###
+AUTH_USER_MODEL = "users.User"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
