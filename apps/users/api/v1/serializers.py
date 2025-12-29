@@ -14,9 +14,6 @@ class UserSerializer(ModelSerializer):
             "uuid",
             "email",
             "full_name",
-            "gender",
-            "phone",
-            "language",
             "last_active_at",
             "is_active",
             "is_staff",
@@ -47,13 +44,8 @@ class UserCreateSerializer(ModelSerializer):
         fields = [
             "email",
             "full_name",
-            "gender",
-            "phone",
-            "language",
             "password",
             "password_confirm",
-            "is_active",
-            "is_staff",
         ]
 
     def validate(self, attrs):
@@ -75,9 +67,6 @@ class UserUpdateSerializer(ModelSerializer):
         fields = [
             "email",
             "full_name",
-            "gender",
-            "phone",
-            "language",
             "is_active",
             "is_staff",
         ]
@@ -90,7 +79,6 @@ class UserListSerializer(ModelSerializer):
             "uuid",
             "email",
             "full_name",
-            "gender",
             "is_active",
             "created_by",
             "updated_by",

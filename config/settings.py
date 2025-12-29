@@ -40,6 +40,7 @@ if IS_LOCAL_SERVER:
     DEBUG_APPS = [
         "silk",
         "django_extensions",
+        "drf_yasg",
     ]
 else:
     DEBUG_APPS = []

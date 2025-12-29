@@ -5,7 +5,6 @@ from apps.users.models import User
 
 class UserFilter(django_filters.FilterSet):
     email = django_filters.CharFilter(lookup_expr="icontains")
-    phone = django_filters.CharFilter(lookup_expr="icontains")
 
     ordering = django_filters.OrderingFilter(
         fields=(
