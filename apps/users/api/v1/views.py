@@ -1,4 +1,4 @@
-from rest_framework.permissions import AllowAny, IsAdminUser
+from rest_framework.permissions import IsAdminUser
 
 from apps.users.api.v1.serializers import (
     UserCreateSerializer,
@@ -15,7 +15,6 @@ class UserApi(ApiAuthMixin, BaseModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     filterset_class = UserFilter
-    permission_classes = [AllowAny]
 
     permission_classes_by_action = {
         "destroy": [IsAdminUser],

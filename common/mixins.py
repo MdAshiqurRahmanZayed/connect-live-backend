@@ -1,6 +1,6 @@
 from django.utils import timezone
 from rest_framework.authentication import SessionAuthentication
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
@@ -112,4 +112,4 @@ class ApiAuthMixin:
     """
 
     authentication_classes = [JWTAuthentication, CsrfExemptedSessionAuthentication]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
